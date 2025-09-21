@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meesho E-commerce Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meesho</h1>
+      <p>Your one-stop shop for occasion-based discovery!</p>
+    </header>
+
+    <main class="product-container" id="product-container"></main>
+
+    <button class="chatbot-toggler" onclick="toggleChatbot()">💬</button>
+    <div class="chatbot-box" id="chatbot-box">
+      <div class="chatbot-header">
+        <h3>Occasion Bot</h3>
+        <span class="close-btn" onclick="toggleChatbot()">❌</span>
+      </div>
+      <div class="chat-history" id="chat-history">
+        <div class="chat bot">
+          <p>
+            Hello! How can I help you find the perfect item for your occasion?
+          </p>
+        </div>
+      </div>
+      <div class="chat-input-box">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Type your query..."
+          onkeydown="handleKeyPress(event)"
+        />
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
